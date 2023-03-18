@@ -22,6 +22,9 @@ if(isset($_POST)){
 	$mail->FromName = $fromName;
 	$mail->addAddress($to, 'Admin');
 
+
+	$mail->SMTPSecure = 'ssl';
+
 	$mail->isHTML(true);
 	$mail->CharSet = $charset;
 
