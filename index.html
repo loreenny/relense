@@ -1064,39 +1064,8 @@
   <script src="assets/js/typed.js"></script>
   <script src="assets/js/common.js"></script>
 
+<script src="form.js"></script>
 
-  <script>
-  function filterDropdowns(stateValue) {
-
-    if (`selectedState == ${stateValue}`) {
-
-        $(`#corn-neo-trials select`).not(`#corn-neo-${stateValue}-trials`).each(function () {
-            $(this).hide()
-            $(`#corn-neo-${stateValue}-trials`).show()
-        });
-        console.log(stateValue)
-
-    }
-}
-
-
-$(document).on('change', '#corn-neo-states', function () {
-    $('#crop-options option[value="corn"]').attr("selected", "selected");
-    selectedState = $("#corn-neo-states").val();
-    console.log(selectedState);
-
-    $('#state-select select').not('#corn-neo-states, #state-select, #corn-neo-trials').each(function () {
-        $(this).hide()
-        $('#corn-neo-states, #state-select, #corn-neo-trials').show()
-    });
-
-    filterDropdowns(selectedState)
-
-    $('#state-select').addClass('whiteColor')
-    $('#corn-neo-trials').removeClass('whiteColor')
-
-});
-</script>
 
 
 
