@@ -932,13 +932,14 @@
                 <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
                   <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
                   <div class="contacts-form">
-                    <form id="cform" method="post">
+
+  							<form role="form" type="post" id="theform">
                       <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div class="group">
                             <label>
                               Your Full Name <b>*</b>
-                              <input type="text" name="name" >
+                              <input type="text" name="name" data-form-field="Name"  required>
                             </label>
                           </div>
                         </div>
@@ -946,37 +947,41 @@
                           <div class="group">
                             <label>
                               Your Email Address <b>*</b>
-                              <input type="email" name="email" >
+                              <input type="email" name="email" data-form-field="Email" required>
                             </label>
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="group">
                             <label>
-                              Your Subject <b>*</b>
-                              <input type="text" name="subject" >
+                              Your Subject
+                              <input type="text" name="subject" data-form-field="Subject">
                             </label>
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="group">
                             <label>
-                              Your Message <b>*</b>
-                              <textarea name="message"></textarea>
+                              Your Message
+                              <textarea name="message" data-form-field="Message"></textarea>
                             </label>
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
                           <div class="terms-label">* Accept the terms and conditions.</div>
-                          <a href="#" class="btn" onclick="$('#cform').submit(); return false;">
+
+                            <button type="submit" class="btn">
                             <span>Send Message</span>
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </form>
-                    <div class="alert-success" style="display: none;">
-                      <p>Thanks, your message is sent successfully.</p>
-                    </div>
+                    <div class="success_message" style="display:flex;justify-content:center;display:none;overflow:none">
+								<h6 class="text-center">Your message was sent successfully!</h6>
+							</div>
+							<div class="error_message" style="display:flex;justify-content: center;display:none;overflow:none">
+								<h5 class="text-center">Sorry there was an error sending your form.</h5>
+							</div>
                   </div>
 
                 </div>
