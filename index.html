@@ -933,50 +933,35 @@
                   <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
                   <div class="contacts-form">
 
-  							<form role="form" type="post" id="theform">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <div class="group">
-                            <label>
-                              Your Full Name <b>*</b>
-                              <input type="text" name="name" data-form-field="Name"  required>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <div class="group">
-                            <label>
-                              Your Email Address <b>*</b>
-                              <input type="email" name="email" data-form-field="Email" required>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Subject
-                              <input type="text" name="subject" data-form-field="Subject">
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <div class="group">
-                            <label>
-                              Your Message
-                              <textarea name="message" data-form-field="Message"></textarea>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
-                          <div class="terms-label">* Accept the terms and conditions.</div>
 
-                            <button type="submit" class="btn">
-                            <span>Send Message</span>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                    <div class="success_message" style="display:flex;justify-content:center;display:none;overflow:none">
+							<form role="form" type="post" id="theform">
+
+								<div class="form-group">
+									<label for="formControl1">Name *</label>
+									<input id="formControl1" type="text" class="form-control required" tabindex="-1" aria-hidden="false" name="name" data-form-field="Name" required>
+								</div>
+								<div class="form-group mt-3">
+									<label for="formControl2">Email *</label>
+									<input type="email" id="formControl2" class="form-control required" tabindex="-1" aria-hidden="false" name="email" data-form-field="Email" required>
+								</div>
+								<div class="form-group mt-3">
+									<label for="formControl3">Phone (optional)</label>
+									<input type="text" id="formControl3" class="form-control" tabindex="-1" aria-hidden="false" name="phone" data-form-field="Phone">
+								</div>
+
+
+
+								<textarea title="Contact Us message box" name="message" tabindex="0" aria-hidden="false" rows="7" data-form-field="Message" class="textArea2 mt-5"></textarea>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right mt-5">
+								<button type="submit" class="btn">
+							Submit
+
+								</button>
+</div>
+							</form>
+
+
+              <div class="success_message" style="display:flex;justify-content:center;display:none;overflow:none">
 								<h6 class="text-center">Your message was sent successfully!</h6>
 							</div>
 							<div class="error_message" style="display:flex;justify-content: center;display:none;overflow:none">
@@ -1064,7 +1049,7 @@
   <script src="assets/js/typed.js"></script>
   <script src="assets/js/common.js"></script>
 
-<script src="form.js"></script>
+  <script src="form.js"></script>
 
 
 
