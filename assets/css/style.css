@@ -1503,6 +1503,7 @@ hr {
 	top: 0;
 	transform: translateZ(0) translateY(0);
 	-webkit-transform: translateZ(0)  translateY(0);
+	background: white;
 }
 
 @media screen and (max-width: 1200px) {
