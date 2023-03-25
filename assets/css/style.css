@@ -114,7 +114,7 @@ b, strong {
 
 .back-to-top {
   position: fixed;
-  right: 2.5rem;
+  right: .5rem;
   bottom: 9rem;
   z-index: 77;
 
