@@ -12,6 +12,12 @@
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+<link rel="stylesheet" href="vendorlibs/bootstrap/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
+   <script src="form.js"></script>
 
   <!-- CSS STYLES -->
   <link rel="stylesheet" href="assets/css/vendors/bootstrap.css" type="text/css" media="all" >
@@ -934,39 +940,40 @@
                   <div class="contacts-form">
 
 
-							<form role="form" type="post" id="theform">
+				      <form id="theform">
 
 								<div class="form-group">
 									<label for="formControl1">Name *</label>
-									<input id="formControl1" type="text" class="form-control required" tabindex="-1" aria-hidden="false" name="name" data-form-field="Name" required>
+									<input id="name" type="text" class="form-control required" tabindex="-1" aria-hidden="false" name="name" data-form-field="Name" required>
 								</div>
 								<div class="form-group mt-3">
 									<label for="formControl2">Email *</label>
-									<input type="email" id="formControl2" class="form-control required" tabindex="-1" aria-hidden="false" name="email" data-form-field="Email" required>
+									<input type="email" id="email" class="form-control required" tabindex="-1" aria-hidden="false" name="email" data-form-field="Email" required>
 								</div>
 								<div class="form-group mt-3">
 									<label for="formControl3">Phone (optional)</label>
-									<input type="text" id="formControl3" class="form-control" tabindex="-1" aria-hidden="false" name="phone" data-form-field="Phone">
+									<input type="text" id="phone" class="form-control" tabindex="-1" aria-hidden="false" name="phone" data-form-field="Phone">
 								</div>
 
 
 
-								<textarea title="Contact Us message box" name="message" tabindex="0" aria-hidden="false" rows="7" data-form-field="Message" class="textArea2 mt-5"></textarea>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right mt-5">
-								<button type="submit" class="btn">
-							Submit
+								<textarea title="Contact Us message box" id="message" name="message" tabindex="0" aria-hidden="false" rows="7" data-form-field="Message" class="textArea2 mt-5"></textarea>
 
-								</button>
-</div>
+
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right mt-5">
+								<button type="submit" class="btn">
+    							Submit
+
+    								</button>
+                    </div>
 							</form>
 
-
               <div class="success_message" style="display:flex;justify-content:center;display:none;overflow:none">
-								<h6 class="text-center">Your message was sent successfully!</h6>
-							</div>
-							<div class="error_message" style="display:flex;justify-content: center;display:none;overflow:none">
-								<h5 class="text-center">Sorry there was an error sending your form.</h5>
-							</div>
+              								<h6 class="text-center">Your message was sent successfully!</h6>
+              							</div>
+
+
                   </div>
 
                 </div>
@@ -1035,15 +1042,6 @@
   <div class="back-to-top">
     <i aria-hidden="true" class="far fa-angle-up"></i>
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
-
- <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-  <script src="form.js"></script>
-
 
 
 	<div class="cursor"></div>
@@ -1065,7 +1063,144 @@
   <script src="assets/js/jquery.cookie.js"></script>
   <script src="assets/js/typed.js"></script>
   <script src="assets/js/common.js"></script>
+ <!-- <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script> -->
 
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+
+
+<script type="module">
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAzuWvOuDgMvjtQsUWXSH5AI_5Xi-sgg4c",
+    authDomain: "contact-form-d9087.firebaseapp.com",
+    projectId: "contact-form-d9087",
+    storageBucket: "contact-form-d9087.appspot.com",
+    messagingSenderId: "991459204507",
+    appId: "1:991459204507:web:597ef3d8e60e1f6be4d53e",
+    measurementId: "G-93LTCBX4ED"
+  }
+
+
+  firebase.initializeApp(firebaseConfig);
+
+  // firebase.initializeApp(config);
+
+
+  var messagesRef = firebase.database().ref('messages');
+
+
+  document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+  function submitForm(e){
+    e.preventDefault();
+
+
+    var name = getInputVal('name');
+
+    var email = getInputVal('email');
+    var phone = getInputVal('phone');
+    var message = getInputVal('message');
+
+
+    saveMessage(name, email, phone, message);
+
+
+    $('.success_message').show()
+
+
+    setTimeout(function(){
+      $('.success_message').hide()
+    },3000);
+
+
+    document.getElementById('contactForm').reset();
+  }
+
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
+
+
+  function saveMessage(name, email, phone, message){
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      name: name,
+
+      email: email,
+      phone: phone,
+      message: message
+    });
+
+  }
+</script>
+
+  <!-- <script>
+
+var config = {
+  apiKey: "AIzaSyAzuWvOuDgMvjtQsUWXSH5AI_5Xi-sgg4c",
+  authDomain: "contact-form-d9087.firebaseapp.com",
+  projectId: "contact-form-d9087",
+  storageBucket: "contact-form-d9087.appspot.com",
+  messagingSenderId: "991459204507",
+  appId: "1:991459204507:web:597ef3d8e60e1f6be4d53e",
+  measurementId: "G-93LTCBX4ED"
+};
+firebase.initializeApp(config);
+
+
+var messagesRef = firebase.database().ref('messages');
+
+
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+
+
+  var name = getInputVal('name');
+
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
+  var message = getInputVal('message');
+
+
+  saveMessage(name, company, email, phone, message);
+
+
+  document.querySelector('.alert').style.display = 'block';
+
+
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+
+  document.getElementById('contactForm').reset();
+}
+
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+
+function saveMessage(name, email, phone, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+
+    email: email,
+    phone: phone,
+    message: message
+  });
+}
+</script>
+ -->
 
 
 
