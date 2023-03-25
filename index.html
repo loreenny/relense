@@ -935,10 +935,10 @@
                   <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
                   <div class="contacts-form">
 
-                    <div id="submitForm">
+
 
                     <form action="https://formspree.io/f/xlekwzle"
-                    method="POST">
+                    method="POST" id="submitForm">
 
 								<div class="form-group">
 									<label for="formControl1">Name *</label>
@@ -968,7 +968,7 @@
 							</form>
 
 
-            </div>
+
               <div class="success_message" style="display:flex;justify-content:center;display:none;overflow:none">
               								<h6 class="text-center">Your message was sent successfully!</h6>
               							</div>
@@ -1071,42 +1071,40 @@
   <script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
      <script src="form.js"></script>
 
-<script>
-$('.back-to-top').click(() => {
-  scrollfn("#overview");
-})
 
-$('.back-to-top').on('keypress', () => {
-  scrollfn("#overview");
-})
+     <script>
+     $('.back-to-top').click(() => {
+       scrollfn("#overview");
+     })
 
-
-$(window).scroll(function () {
-  ((window.pageYOffset || document.documentElement.scrollTop) > 100) ? $('.back-to-top').css({ opacity: 1, visibility: "visible" }) : $('.back-to-top').css({ opacity: 0, visibility: "hidden" });
-});
-
-function scrollfn(e) {
-  let $target = $(e),
-  offSet = e === "#overview" ? 0 : $target.offset().top;
-  $('html, body').stop().animate({
-    'scrollTop': offSet
-  }, 1200, 'swing');
+     $('.back-to-top').on('keypress', () => {
+       scrollfn("#overview");
+     })
 
 
-}
+     $(window).scroll(function () {
+       ((window.pageYOffset || document.documentElement.scrollTop) > 100) ? $('.back-to-top').css({ opacity: 1, visibility: "visible" }) : $('.back-to-top').css({ opacity: 0, visibility: "hidden" });
+     });
+
+     function scrollfn(e) {
+       let $target = $(e),
+       offSet = e === "#overview" ? 0 : $target.offset().top;
+       $('html, body').stop().animate({
+         'scrollTop': offSet
+       }, 1200, 'swing');
 
 
-$('.submitIt').click(function(e) {
-  e.preventDefault()
-  console.log("sdfegkubsdvbuvdsbukdsbuk")
-  $('#submitForm').hide();
-  $('.success_message').show();
-
-})
+     }
 
 
-</script>
+     $('.submitIt').click(function() {
+       $('#submitForm').hide();
+       $('.success_message').show();
 
+     })
+
+
+     </script>
 
 
 <!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
